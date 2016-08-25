@@ -1,0 +1,22 @@
+<ion-header no-shadow>
+    <ion-toolbar class="exhibit-toolbar" >
+        <button #tjBtn clear gray small (click)="changeExhibitType('')">推荐展览</button>
+        <button #zzBtn clear gray small (click)="changeExhibitType(1)">正在展览</button>
+        <button #jjBtn clear gray small (click)="changeExhibitType(2)">即将开展</button>
+        <button #lsBtn clear gray small (click)="changeExhibitType(3)">历史回顾</button>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-card *ngFor="let exhibit of exhibits" (click)="gotoExhibitInfoPage(exhibit)">
+      <img src="{{exhibit.cover}}" alt="">
+      <ion-card-content>
+        <ion-card-title class="card-title">
+          {{exhibit.titleName}}
+        </ion-card-title>
+        <p>展览时间: {{exhibit.startDate}} - {{exhibit.endDate}}</p>
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
+</ion-content>

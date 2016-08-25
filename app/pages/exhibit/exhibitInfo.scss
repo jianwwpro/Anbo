@@ -1,0 +1,25 @@
+.exhibit-info{
+    img{
+        width:100%;
+    }
+    h2{
+        font-size: 1.8rem;
+        font-weight: normal;
+    }
+
+    p{
+        color: $textColor;
+        &.address{
+            margin-top: 5px;
+        }
+        &.date{
+            margin: 0;
+        }
+        &.desc{
+            height: 50px;
+            overflow: hidden;
+        }
+
+    }
+
+}
